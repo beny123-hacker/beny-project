@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Odd or Even Numbers</title>
+</head>
+<body>
+
+<h2>Print Odd or Even Numbers from 1 to 10</h2>
+
+<label for="choice">Choose:</label>
+<select id="choice">
+  <option value="even">Even</option>
+  <option value="odd">Odd</option>
+</select>
+
+<button onclick="printNumbers()">Print</button>
+
+<p id="output"></p>
+
+<script>
+  function printNumbers() {
+    let choice = document.getElementById("choice").value;
+    let result = "";
+
+    for (let i = 1; i <= 10; i++) {
+      if (choice === "even" && i % 2 === 0) {
+        result += i + " ";
+      } else if (choice === "odd" && i % 2 !== 0) {
+        result += i + " ";
+      }
+    }
+
+    document.getElementById("output").innerText = result;
+  }
+</script>
+
+</body>
+</html>
